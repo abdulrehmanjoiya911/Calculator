@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.calculator {
+  width: 320px;
+  background: #1c1c1e;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+/* Display */
+.display {
+  padding: 28px 24px 16px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  gap: 4px;
+}
+
+.expression {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.result {
+  font-size: 56px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #3a3a3c;
+}
+
+/* Base button */
+.btn {
+  height: 76px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  background: #2c2c2e;
+  transition: filter 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover  { filter: brightness(1.2); }
+.btn:active { filter: brightness(0.8); }
+
+/* Wide "0" button */
+.wide {
+  grid-column: span 2;
+  justify-content: flex-start;
+  padding-left: 28px;
+}
+
+/* Function buttons (AC, +/-, %) */
+.function {
+  background: #636366;
+  color: #fff;
+}
+
+/* Operator buttons (+, -, ×, ÷, =) */
+.operator {
+  background: #ff9f0a;
+  color: #fff;
+}
+
+/* Active operator (shows inverted while operand is being entered) */
+.operator.active {
+  background: #fff;
+  color: #ff9f0a;
+}
